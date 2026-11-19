@@ -1,0 +1,11 @@
+install.packages('mapsnp')
+install.packages('Gviz')
+library("devtools")
+library("BiocManager")
+BiocManager::install("Gviz")
+#Loading required package: usethis
+install_github("csuzfq/mapsnp_pkg/mapsnp")
+devtools::install_github("csuzfq/mapsnp_pkg/mapsnp/")
+library(mapsnp)
+data(snp)
+msa(M = snp, start = 111950277, end = 112036294, SNPidPos = ‘alternating’)
